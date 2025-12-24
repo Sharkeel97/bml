@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App</title>
+
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+  }
+
+  .app {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .app img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Invisible clickable area for BML Islamic */
+  .bml-click {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 48%;     /* adjust if needed */
+    height: 16%;  /* covers BML area */
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="app">
+  <img id="screen" src="main.jpg" alt="Main Screen">
+
+  <!-- Clickable BML area -->
+  <div class="bml-click" onclick="openBML()"></div>
+</div>
+
+<script>
+  function openBML() {
+    document.getElementById("screen").src = "bml.jpg";
+  }
+</script>
+
+</body>
+</html>
